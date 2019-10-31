@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build-product") {
             when {
-                changeset "**/*.*"
+                changeset "**/.*"
             }
             steps {
                 script {
