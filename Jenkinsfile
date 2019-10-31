@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     sh "echo building product with changes"
-                    currentBuild.rawBuild.project.displayName = "pipeline-test-2"
+                    currentBuild.rawBuild.project.displayName("pipeline-test-2")
                 }
             }
         }
