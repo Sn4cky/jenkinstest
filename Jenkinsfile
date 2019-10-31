@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage("build-product") {
             when {
-                changeset "**/Jenkinsfile"
+                anyOf {
+                    changeset "**/Jenkinsfile"
+                    changeset "**/domain/.*
+                }
             }
             steps {
                 script {
