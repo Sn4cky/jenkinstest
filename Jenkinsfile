@@ -20,7 +20,7 @@ pipeline {
         }
         stage("deploy") {
             steps {
-                sh "echo deploying project..."
+                sh "echo finally deploying project..."
             }
         }
     }
