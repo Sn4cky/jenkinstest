@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script {
                     sh "echo building product with changes"
+                    sh "echo setting new project displayname"
                     currentBuild.rawBuild.project.displayName("pipeline-test-2")
                 }
             }
