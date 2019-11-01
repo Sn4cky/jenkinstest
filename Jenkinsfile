@@ -5,7 +5,7 @@ pipeline {
             when {
                 anyOf {
                     changeset "**/Jenkinsfile"
-                    changeset "hu/bk/jenkinstest/domain/*.*"
+                    changeset "hu/bk/**"
                 }
             }
             steps {
