@@ -3,13 +3,16 @@ pipeline {
     stages {
         stage("build-product") {
             when {
-                changeset "*"
+                anyOf {
+                    changeset "**/Jenkinsfile"
+                    changeset "hu/bk/jenkinstest/domain/*.*"
+                }
             }
             steps {
                 script {
                     sh "echo building product with changes"
                     sh "echo setting new project displayname"
-                    currentBuild.rawBuild.project.setDisplayName("pipeline-test-2")
+                    currentBuild.rawBuild.project.setDisplayName("pipeline-test-3")
                 }
             }
         }
