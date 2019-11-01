@@ -1,3 +1,8 @@
+/**
+* User model class
+*
+* @author bk
+*/
 public class User {
 	
 	private String username;
