@@ -14,4 +14,9 @@ public class UserInterface {
 	public User getOneUser(String id) {
 		return service.getOneUser(id);
 	}
+	
+	public ModelMap delete(String id) {
+		service.delete(id);
+		return new ModelMap("success", true);
+	}
 }
