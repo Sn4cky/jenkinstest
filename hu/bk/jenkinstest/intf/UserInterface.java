@@ -10,4 +10,8 @@ public class UserInterface {
 		service.saveUser(user);
 		return new ModelMap("success", true);
 	}
+
+	public User getOneUser(String id) {
+		return service.getOneUser(id);
+	}
 }
